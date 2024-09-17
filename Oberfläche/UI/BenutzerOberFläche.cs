@@ -1,14 +1,19 @@
-﻿namespace Oberfläche.UI
+﻿using Database;
+
+namespace Oberfläche.UI
 {
     public class BenutzerOberFläche
     {
-        string produkt;
+        Produkt produkt = new Produkt();
         public void Add()
         {
             Console.WriteLine("Produkt Hinzufügen:");
-            produkt = Console.ReadLine();
+            produkt.Name = Console.ReadLine();
+            Console.WriteLine("Preis Hinzufügen:");
+            produkt.Preis = Console.ReadLine();
 
-            Console.WriteLine("Das Produkt " + produkt + " wurde erfolgreich hinzugefügt!");
+
+            Console.WriteLine("Das Produkt " + produkt.Name + " wurde erfolgreich hinzugefügt!");
 
 
         }
