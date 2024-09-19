@@ -8,13 +8,15 @@ using System.Threading.Tasks;
 
 namespace Database
 {
-    public class MyDbContext : DbContext
+    public class MDbContext : DbContext
     {
-        public MyDbContext(DbSet<Produkt> produkte)
+        public MDbContext(DbContextOptions<MDbContext> options)
+       : base(options)
         {
-            Produkte = produkte;
         }
 
         public DbSet<Produkt> Produkte { get; set; }
+
+
     }
 }
