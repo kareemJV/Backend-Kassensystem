@@ -5,6 +5,8 @@ VisualStudioVersion = 17.8.34309.116
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Oberfläche", "Oberfläche\Oberfläche.csproj", "{96365C0E-A706-4BEB-B566-14BE014BC8C6}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Database", "Database\Database.csproj", "{76C88771-16E2-4662-8A0B-BB3E670D27C0}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{96365C0E-A706-4BEB-B566-14BE014BC8C6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{96365C0E-A706-4BEB-B566-14BE014BC8C6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{96365C0E-A706-4BEB-B566-14BE014BC8C6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{76C88771-16E2-4662-8A0B-BB3E670D27C0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{76C88771-16E2-4662-8A0B-BB3E670D27C0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{76C88771-16E2-4662-8A0B-BB3E670D27C0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{76C88771-16E2-4662-8A0B-BB3E670D27C0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
