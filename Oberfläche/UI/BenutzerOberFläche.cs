@@ -5,6 +5,7 @@ namespace Oberfläche.UI
     public class BenutzerOberFläche
     {
         Produkt produkt = new Produkt();
+        /*
         public void Add()
         {
             Console.WriteLine("Produkt Hinzufügen:");
@@ -18,7 +19,7 @@ namespace Oberfläche.UI
 
         }
 
-
+        */
 
 
     }
