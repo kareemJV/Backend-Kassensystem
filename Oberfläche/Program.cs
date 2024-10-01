@@ -1,14 +1,8 @@
 ﻿using Database;
-using Microsoft.Data.SqlClient;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.Hosting;
-using Microsoft.Graph.Models;
-using Microsoft.Graph.Models.Security;
-using Oberfläche;
-using Oberfläche.UI;
-using System.Configuration;
+
 
 public class Program
 {
