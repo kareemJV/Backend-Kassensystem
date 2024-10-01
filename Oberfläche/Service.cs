@@ -27,7 +27,7 @@ public class Service
             _context.Add(produkt);
             _context.SaveChanges();  // Speichere die Änderungen
 
-            Console.WriteLine("Das Produkt " + produkt.Name + " wurde erfolgreich hinzugefügt!");
+            Console.WriteLine("Das Produkt " + produkt.Name + " mit der ID " + produkt.ID + "  wurde erfolgreich hinzugefügt!");
         }
         else
         {
@@ -38,23 +38,29 @@ public class Service
 
     public void Delete()
     {
-        Produkt produkt = new Produkt();  // Stelle sicher, dass dies nicht null ist
-
         Console.WriteLine("Produkt ID eingeben:");
         if (int.TryParse(Console.ReadLine(), out int id))
         {
-            produkt.ID = id;
-            _context.Remove(produkt.ID);
-            _context.SaveChanges();
+            // Suche nach dem Produkt anhand der ID
+            var produkt = _context.Produkte.Find(id);  // _context.Produkte bezieht sich auf das DbSet<Produkt>
 
+            if (produkt != null)
+            {
+                // Entferne das gefundene Produkt
+                _context.Remove(produkt);
+                _context.SaveChanges();
 
+                Console.WriteLine("Das Produkt mit der ID " + id + " wurde erfolgreich gelöscht!");
+            }
+            else
+            {
+                Console.WriteLine("Produkt mit der ID " + id + " wurde nicht gefunden.");
+            }
         }
         else
         {
             Console.WriteLine("Ungültige ID. Bitte geben Sie eine gültige Zahl ein.");
         }
-
-
     }
 
 }
