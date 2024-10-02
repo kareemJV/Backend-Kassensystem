@@ -16,7 +16,5 @@ namespace Database
         }
 
         public DbSet<Produkt> Produkte { get; set; }
-
-
     }
 }

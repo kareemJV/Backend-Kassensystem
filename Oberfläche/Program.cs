@@ -3,7 +3,6 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 
-
 public class Program
 {
     public static void Main(string[] args)
@@ -37,9 +36,32 @@ public class Program
 
         // Hole den Service aus der DI
         var service = host.Services.GetRequiredService<Service>();
-        service.Add();
-        service.Delete();
+        int input;
+        do
+        {
+            Console.WriteLine("Bitte Wählen:");
+            Console.WriteLine("1. Produkt Hinzufügen");
+            Console.WriteLine("2. Produkt löschen");
+            Console.WriteLine("3. Alle anzeigen");
+            Console.WriteLine("0. Programm schließen");
 
+            input = int.Parse(Console.ReadLine());
+            switch (input)
+            {
+                case 1:
+                    service.Add();
+                    break;
+
+                case 2:
+                    service.Delete();
+                    break;
+
+                case 3:
+
+                case 0:
+                    Console.WriteLine("Auf wieder sehen !");
+                    break;
+            }
+        } while (input != 0);
     }
-
 }

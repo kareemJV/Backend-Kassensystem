@@ -33,7 +33,6 @@ public class Service
         {
             Console.WriteLine("Ungültiger Preis. Bitte geben Sie einen gültigen Dezimalwert ein.");
         }
-
     }
 
     public void Delete()
@@ -62,5 +61,4 @@ public class Service
             Console.WriteLine("Ungültige ID. Bitte geben Sie eine gültige Zahl ein.");
         }
     }
-
 }
