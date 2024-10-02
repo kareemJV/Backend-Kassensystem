@@ -4,23 +4,16 @@ namespace Oberfläche.UI
 {
     public class BenutzerOberFläche
     {
-        Produkt produkt = new Produkt();
-        /*
-        public void Add()
+        public BenutzerOberFläche()
+        { }
+
+        public void UI()
         {
-            Console.WriteLine("Produkt Hinzufügen:");
-            produkt.Name = Console.ReadLine();
-            Console.WriteLine("Preis Hinzufügen:");
-            produkt.Preis = Console.ReadLine();
-
-
-            Console.WriteLine("Das Produkt " + produkt.Name + " wurde erfolgreich hinzugefügt!");
-
-
+            Console.WriteLine("Bitte Wählen:");
+            Console.WriteLine("1. Produkt Hinzufügen");
+            Console.WriteLine("2. Produkt löschen");
+            Console.WriteLine("3. Alle anzeigen");
+            Console.WriteLine("0. Programm schließen");
         }
-
-        */
-
-
     }
 }
