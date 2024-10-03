@@ -18,14 +18,6 @@ public class Program
                 // Verwende den Connection String aus der Konfiguration
                 var connectionString = context.Configuration.GetConnectionString("DefaultConnection");
 
-                // Ausgabe des Connection Strings zur Überprüfung
-                Console.WriteLine("ConnectionString: " + connectionString);
-
-                if (string.IsNullOrWhiteSpace(connectionString))
-                {
-                    throw new Exception("Connection string is null or empty.");
-                }
-
                 // Füge den DbContext und den Service zur DI hinzu
                 services.AddDbContext<MDbContext>(options =>
                     options.UseSqlServer(connectionString));
@@ -57,6 +49,8 @@ public class Program
                     break;
 
                 case 3:
+                    service.GetAll();
+                    break;
 
                 case 0:
                     Console.WriteLine("Auf wieder sehen !");
