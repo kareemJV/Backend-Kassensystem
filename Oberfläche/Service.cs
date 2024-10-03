@@ -1,5 +1,4 @@
 ﻿using Database;
-using Microsoft.Graph.Models;
 
 public class Service
 {
@@ -59,6 +58,25 @@ public class Service
         else
         {
             Console.WriteLine("Ungültige ID. Bitte geben Sie eine gültige Zahl ein.");
+        }
+    }
+
+    public void GetAll()
+    {
+        Console.WriteLine("Jetzt werden alle Produkte gezeigt: ");
+
+        var produkte = _context.Produkte.ToList();
+
+        if (produkte.Count > 0)
+        {
+            foreach (var produkt in produkte)
+            {
+                Console.WriteLine(produkt);
+            }
+        }
+        else
+        {
+            Console.WriteLine("Keine Einträge gefunden!");
         }
     }
 }
